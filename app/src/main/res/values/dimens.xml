@@ -1,0 +1,61 @@
+<resources>
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">10dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="padding_search_bar">5dp</dimen>
+    <dimen name="height_row_weixin">59dp</dimen>
+    <dimen name="size_avatar">48dp</dimen>
+    <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="field_textsize">14sp</dimen>
+    <dimen name="field_margin_right">5dp</dimen>
+    <dimen name="call_button_padding_vertical">10dp</dimen>
+    <dimen name="call_button_padding_left">25dp</dimen>
+    <dimen name="call_button_padding_right">25dp</dimen>
+    <dimen name="sidebar_text_size">10dp</dimen>
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="chat_nick_margin_left">12dp</dimen>
+    <dimen name="chat_nick_text_size">13sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="recyclerview">4dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <!-- 字体大小 -->
+    <dimen name="text_size_big_large">20sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_middle">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <!-- 图片大小 -->
+    <dimen name="image_size_big_large">100dp</dimen>
+    <dimen name="image_size_large">80dp</dimen>
+    <dimen name="image_size_middle">70dp</dimen>
+    <dimen name="image_size_normal">60dp</dimen>
+    <dimen name="image_size_small">50dp</dimen>
+
+    <!-- 分割线高度 -->
+    <dimen name="line_vertical_width">0.15dp</dimen>
+    <dimen name="line_horizontal_height">0.15dp</dimen>
+    <!-- 上导航，下导航，状态栏高度 -->
+    <dimen name="top_navigation_bar_height">48dp</dimen>
+    <dimen name="bottom_navigation_bar_height">56dp</dimen>
+    <dimen name="margin_layout">16dp</dimen>
+    <dimen name="padding_layout">16dp</dimen>
+    <dimen name="item_padding">10dp</dimen>
+    <dimen name="dip">3dp</dimen>
+
+
+</resources>

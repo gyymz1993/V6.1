@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#A0000000">
+    
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="17dp" >
+
+        <ImageView
+            android:id="@+id/call_steward"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_call" />
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/iv_two"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_hcip_one"/>
+    
+    <ImageView 
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/rl"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_hcip_two"/>
+
+</RelativeLayout>

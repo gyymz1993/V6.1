@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tv_no_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/re_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tv_feedback_number"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_toRightOf="@+id/re_name"
+                android:background="@drawable/feedback"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="发起123,打赏14"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:id="@+id/re_name"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="-25dp"
+                android:layout_toRightOf="@+id/iv_name_photo"
+                android:background="@drawable/nameandlevel"
+                android:paddingLeft="30dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="李晨奇"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_level"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:src="@drawable/level_one" />
+            </RelativeLayout>
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:id="@+id/iv_name_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                app:borderRadius="100dp"
+                app:type="round" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-15dp">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2015-05-15  21:21:21"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/zishang_state"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:text="未完成"
+                android:textColor="#b79771"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_douzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/tv_shang"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangzi" />
+
+            <TextView
+                android:id="@+id/tv_douzi_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/tv_shang"
+                android:text="12365"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="殴斗丁咚咚咚你度搜电脑搜都电脑搜ID谁弄得三农的涉农ID搜ID"
+            android:textSize="13sp" />
+
+        <com.lsjr.zizisteward.ly.activity.RoundImageView
+            android:id="@+id/iv_zishang_photo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shishi"
+            app:borderRadius="5dp"
+            app:type="round" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_classic_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/zishang_classic_new"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="时尚" />
+
+            <TextView
+                android:id="@+id/tv_classic_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_classic_one"
+                android:background="@drawable/zishang_classic_new"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="打牌" />
+
+            <TextView
+                android:id="@+id/tv_classic_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_classic_two"
+                android:background="@drawable/zishang_classic_new"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="打牌" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_is_hava_fankui"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/yiyoufankui"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_is_done"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/weiwancheng"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_go_to_fankui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_fankui_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="去反馈"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_fankui_number"
+                android:scaleType="fitXY"
+                android:src="@drawable/qufankui" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/common_bg" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="该类别孜赏暂时无内容"
+        android:visibility="gone" />
+
+</RelativeLayout>

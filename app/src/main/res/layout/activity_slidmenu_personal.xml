@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mybetterandroid.wheel.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#262626"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    app:rightPadding="100dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/layout_menu" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/zz_bg">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:onClick="toggleMenu" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.mybetterandroid.wheel.SlidingMenu>

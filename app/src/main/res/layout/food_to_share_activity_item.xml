@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="15dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_positioning" />
+
+        <TextView
+            android:id="@+id/tv_positioning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ADADAD"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:id="@+id/riv_head_two"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="2dp"
+                android:visibility="gone"
+                app:borderRadius="10dp"
+                app:type="circle" />
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:id="@+id/riv_head_one"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="35dp"
+                android:visibility="gone"
+                app:borderRadius="10dp"
+                app:type="circle" />
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:id="@+id/riv_head"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                app:borderRadius="10dp"
+                app:type="circle" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F5A623"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sentiment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15sp"
+            android:gravity="center_vertical"
+            android:text="人气"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:lines="3"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#efefef" />
+
+</LinearLayout>

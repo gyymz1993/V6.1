@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center">
+    
+    <LinearLayout 
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@drawable/icon_popwindow">
+        
+        <TextView 
+            android:gravity="center_horizontal|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="系统检测到您已认证美食达人身份"
+            android:textColor="#000000"
+            android:textSize="13sp"/>
+        
+        <TextView 
+            android:gravity="center_horizontal|top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="您的点评将影响到用户的就餐选择"
+            android:textColor="#000000"
+            android:textSize="13sp"/>
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efefef"/>
+        
+        <TextView 
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="确定"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#0076FF"/>
+        
+    </LinearLayout>
+    
+</LinearLayout>

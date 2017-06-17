@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.mybetterandroid.wheel.PullToRefreshView
+        xmlns:ebm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pulltorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="1dp" />
+    </com.mybetterandroid.wheel.PullToRefreshView>
+
+</RelativeLayout>

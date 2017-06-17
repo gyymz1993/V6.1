@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/input_yao"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/get_yao"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/get_yao"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="获取邀请码"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请码可作为邀请好友。"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_code"
+            android:text="一键查询"
+            android:textColor="@color/yellow"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_check"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/input_yan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/get_yan"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/get_yan"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_yan_eo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="验证码可用作添加通讯录好友"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/rl_parent">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pop_white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_camera"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center"
+                android:text="拍照"
+                android:textSize="16sp"
+                android:textColor="@color/red" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e2e2e2" />
+
+            <TextView
+                android:id="@+id/tv_photo_album"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center"
+                android:text="从手机相册选择"
+                android:textSize="16sp"
+                android:textColor="#177EFC" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_pop_white"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="#177EFC" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</RelativeLayout>

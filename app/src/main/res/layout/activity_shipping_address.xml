@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <com.zizisteward.view.refresh.SuperListView
+        android:id="@+id/listview_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/gray"
+        android:dividerHeight="0.1dp"
+        android:drawSelectorOnTop="false"
+        android:fastScrollEnabled="true"
+        android:listSelector="@color/transparent" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:text="添 加 新 地 址" 
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

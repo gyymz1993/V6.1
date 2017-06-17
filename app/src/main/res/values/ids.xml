@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="top_legt1" type="id"/>
+    <item name="top_legt2" type="id"/>
+    <item name="top_middle1" type="id"/>
+    <item name="top_middle2" type="id"/>
+    <item name="top_right1" type="id"/>
+    <item name="top_right2" type="id"/>
+    <item name="top_right3" type="id"/>
+    <item name="selected_view" type="id"/>
+    <item name="gridview" type="id"/>
+    <item name="webview" type="id"/>
+    <item name="scrollview" type="id"/>
+    <item name="slidable_panel" type="id"/>
+    <item name="slidable_content" type="id"/>
+
+</resources>

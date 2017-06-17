@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.lsjr.zizisteward.utils.PullToRefreshLayout
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.lsjr.zizisteward.utils.PullableScrollView
+            android:id="@+id/psv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_beijing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/re_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                                android:id="@+id/iv_logo"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="centerCrop"
+                                app:borderRadius="5dp"
+                                app:type="round" />
+
+                            <TextView
+                                android:id="@+id/b_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_logo"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2dp"
+                                android:textSize="8sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_care_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/re_logo" />
+
+                        <RelativeLayout
+                            android:id="@+id/re_care"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/new_shop_care"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/iv_care"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_centerVertical="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/shop_care" />
+
+                            <TextView
+                                android:id="@+id/tv_care"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/iv_care"
+                                android:textColor="#ff9900"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/common_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/re_all"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="全部商品"
+                                android:textColor="#ff9900"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_all"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/new_shop_huangxian"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/re_new"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="新品上架"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_new"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/new_shop_huangxian"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/re_intro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_intro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_intro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_intro"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/new_shop_huangxian"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/common_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_second_classic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/re_moren"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/moren"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="默认 "
+                                android:textColor="#ff9900"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/re_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="价格 "
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/price_change"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/price"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/shop_price_no" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/re_cell"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/cell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="销量 "
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.lsjr.zizisteward.newview.MyGridView
+                    android:id="@+id/gv_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_beijing"
+                    android:clipToPadding="true"
+                    android:horizontalSpacing="4dp"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="2"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="4dp" />
+
+                <RelativeLayout
+                    android:id="@+id/fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_beijing"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_jianjie_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发农夫" />
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_jianjie_title"
+                        android:layout_marginTop="10dp"></TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.lsjr.zizisteward.utils.PullableScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <include layout="@layout/load_more" />
+        </LinearLayout>
+    </com.lsjr.zizisteward.utils.PullToRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/travel_home" >
+
+        <TextView
+            android:id="@+id/tv_imzi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="I  M  Z  I"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_imzi"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="请选择一种方式联系我:\n contact me by these ways" />
+
+        <ImageView
+            android:id="@+id/iv_hengxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/travel_hengxian" />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_hengxian"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:drawableTop="@drawable/travel_call"
+            android:gravity="center_horizontal"
+            android:text="呼叫管家" />
+
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_call"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:drawableTop="@drawable/travel_chat"
+            android:gravity="center_horizontal"
+            android:text="在线吩咐" />
+
+        <TextView
+            android:id="@+id/tv_travel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:drawableTop="@drawable/travel_chat"
+            android:gravity="center_horizontal"
+            android:text="定制出行" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_travel" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/tv_jinru_travel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="26dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/jinru_travel" />
+
+</RelativeLayout>

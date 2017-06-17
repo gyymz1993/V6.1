@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/re_ziwei"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <com.lsjr.zizisteward.ly.activity.RoundImageView
+            android:id="@+id/iv_photo_ziwei"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            app:borderRadius="5dp"
+            app:type="round" />
+
+        <ImageView
+            android:id="@+id/re_beijing_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/toumingdu" />
+
+        <TextView
+            android:id="@+id/tv_content_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_name_food"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="发货佛你好烦哦你发货"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_name_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="兄弟房东"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <FrameLayout
+        android:id="@+id/fl_base"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.mybetterandroid.wheel.widget.CirclePageIndicator
+            android:id="@+id/home_cpi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="3dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fl_base"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp" >
+
+            <TextView
+                android:id="@+id/tv_jiangpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="匠品"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/huangxian" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_mingpin"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="名品"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/re_title"
+        android:background="@color/common_bg" />
+
+</RelativeLayout>

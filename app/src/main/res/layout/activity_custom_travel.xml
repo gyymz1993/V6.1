@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg" >
+
+    <TextView
+        android:id="@+id/tv_jiben"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="基本信息"
+        android:textColor="#000000" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/tv_jiben"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/re_damu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2" >
+
+        <RelativeLayout
+            android:id="@+id/re_mu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/et_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="目的地" />
+
+            <EditText
+                android:id="@+id/et_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/et_name2"
+                android:background="@null"
+                android:editable="false"
+                android:hint="请选择目的地"
+                android:inputType="none"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/to_right" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hong_mu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_mu"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="目的地不能为空啊"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/re_damu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/re_dachu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3" >
+
+        <RelativeLayout
+            android:id="@+id/re_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="出发地" />
+
+            <EditText
+                android:id="@+id/ed_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/et_name"
+                android:background="@null"
+                android:editable="false"
+                android:hint="请选择出发地"
+                android:inputType="none"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/to_right" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hong_chu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_start"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="出发地不能为空啊"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/re_dachu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/re_datime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view4" >
+
+        <RelativeLayout
+            android:id="@+id/re_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_riqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="出发日期" />
+
+            <EditText
+                android:id="@+id/start"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_riqi"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="最早出发时间"
+                android:inputType="none"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/start"
+                android:background="@color/common_bg" />
+
+            <EditText
+                android:id="@+id/end"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/view5"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="最晚出发时间"
+                android:inputType="none"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hong_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_time"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="最早出发时间不能为空啊"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/re_datime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/da_tianshu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view6" >
+
+        <RelativeLayout
+            android:id="@+id/re_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_tian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="出行天数" />
+
+            <EditText
+                android:id="@+id/ed_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_tian"
+                android:background="@null"
+                android:hint="请输入天数"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tianzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ed_days"
+                android:text="(天)"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:drawableLeft="@drawable/set_default_address"
+                android:drawablePadding="2dp"
+                android:text="可适当增减天数"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hong_tianshu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_date"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="出行天数不能为空啊"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/da_tianshu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/da_renshu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view7" >
+
+        <RelativeLayout
+            android:id="@+id/re_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="出行人数" />
+
+            <EditText
+                android:id="@+id/tv_document"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_num"
+                android:background="@null"
+                android:hint="成人"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/chenren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_document"
+                android:text="(成人)"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/tv_document"
+                android:background="@color/common_bg" />
+
+            <EditText
+                android:id="@+id/ed_childern"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/view10"
+                android:background="@null"
+                android:hint="儿童"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ertong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ed_childern"
+                android:text="(儿童)"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hong_renshu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_person"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="出行人数不能为空啊"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="下一步" />
+
+</RelativeLayout>

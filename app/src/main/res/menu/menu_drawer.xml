@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/shaidan"
+            android:icon="@drawable/to_right"
+            android:title="我的晒单"/>
+        <item
+            android:id="@+id/care_me"
+            android:icon="@drawable/to_right"
+            android:title="我关注的人"/>
+        <item
+            android:id="@+id/else2me"
+            android:icon="@drawable/to_right"
+            android:title="关注我的人"/>
+        <item
+            android:id="@+id/shaidan_setting"
+            android:icon="@drawable/to_right"
+            android:title="晒单设置"/>
+    </group>
+
+</menu>

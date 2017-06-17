@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#efefef">
+    
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:background="#000000">
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_back"
+	        android:layout_width="50dp"
+	        android:layout_height="match_parent"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/title_back"/>
+	        
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/tv_title"
+	        android:layout_centerInParent="true" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textColor="#FFFFFF"
+	        android:text="编辑群介绍"/>
+	    
+	    <LinearLayout
+	        android:id="@+id/ll_sure"
+	        android:visibility="gone"
+	        android:layout_alignParentRight="true" 
+	        android:layout_width="50dp"
+	        android:gravity="center"
+	        android:layout_height="match_parent">
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="完成"
+	            android:textColor="#FFFFFF"
+	            android:textSize="16sp"/>
+	        
+	    </LinearLayout>
+	    
+	</RelativeLayout>
+	
+	<View 
+	    android:layout_marginTop="15dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.1dp"
+	    android:background="#cbcbcb"/>
+	
+	<EditText 
+	    android:id="@+id/et_content"
+	    android:padding="10dp"
+	    android:gravity="left"
+	    android:background="#FFFFFF"
+	    android:maxLength="150"
+	    android:hint="填写介绍（10 - 150字）"
+	    android:layout_width="match_parent"
+	    android:layout_height="300dp"/>
+	
+    <View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.1dp"
+	    android:background="#cbcbcb"/>
+    
+</LinearLayout>

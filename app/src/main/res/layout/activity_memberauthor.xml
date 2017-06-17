@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <!--解决不在顶部  Recycleview   android:descendantFocusability="blocksDescendants"-->
+
+    <include  layout="@layout/include_ac_menberauthor_head"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/common_bg"
+        android:id="@+id/id_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

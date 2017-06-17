@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/sel_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/xuanzecity"
+        android:padding="5dp"
+        android:text="选择城市"
+        android:textColor="#ff000000"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="245dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <com.mybetterandroid.wheel.widget.WheelView
+            android:id="@+id/wheel1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1.0" />
+
+        <com.mybetterandroid.wheel.widget.WheelView
+            android:id="@+id/wheel2"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1.0" />
+
+        <com.mybetterandroid.wheel.widget.WheelView
+            android:id="@+id/wheel3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+</LinearLayout>

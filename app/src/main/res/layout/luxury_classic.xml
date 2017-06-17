@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/re_classic_licqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="15dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/iv_classic_licqi"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_head" />
+
+        <TextView
+            android:id="@+id/tv_classic_licqi"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/iv_classic_licqi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="配饰"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_licqi"
+        android:layout_width="1dp"
+        android:layout_height="150dp"
+        android:layout_toRightOf="@+id/re_classic_licqi"
+        android:background="@color/common_bg" />
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"      
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp" >
+
+        <com.zizisteward.view.CircleImageView
+            android:id="@+id/civ_head_portrait"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_photo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/civ_head_portrait"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李晨奇"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_marginTop="5dp"
+                android:text="1分钟前"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout"
+        android:layout_marginLeft="50dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="开发可变为很大佛的哈佛东东" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/common_bg" />
+
+</RelativeLayout>

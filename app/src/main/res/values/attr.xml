@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 导航条 -->
+    <declare-styleable name="MainNavigateTabBar">
+        <attr name="navigateTabTextColor" format="color|reference" />
+        <attr name="navigateTabSelectedTextColor" format="color|reference" />
+        <attr name="containerId" format="integer|reference" />
+        <attr name="navigateTabTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <attr name="rightPadding" format="dimension" />
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedRectProgressBar">
+        <attr name="backColor" format="color" />
+        <attr name="barColor" format="color" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+</resources>

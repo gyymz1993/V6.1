@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.mybetterandroid.wheel.other.PullToRefreshView
+        xmlns:ebm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <com.lsjr.zizisteward.newview.MyGridView
+                android:id="@+id/brand_list_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:paddingBottom="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:scrollbars="none" />
+        </ScrollView>
+    </com.mybetterandroid.wheel.other.PullToRefreshView>
+
+</RelativeLayout>

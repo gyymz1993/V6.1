@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lsjr.zizisteward.activity.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/fragment_container_zhuye"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/radiogroup" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg_black"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tupian"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:text="首页"
+            android:textColor="@color/bottom_select"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_zizi"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:text="孜料"
+            android:textColor="@color/bottom_select"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/radiobutton4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_faxian"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:text="分类"
+            android:textColor="@color/bottom_select"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radiogroup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <ImageView
+            android:id="@+id/call_steward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newtanchu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/call_steward"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:text="呼叫管家"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bulou"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_bu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.4dp"
+            android:src="@drawable/tribe_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_bu"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="2dp"
+            android:text="部落"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

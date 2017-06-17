@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_out_notif" >
+
+        <TextView
+            android:id="@+id/tv_xiaxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="下线通知"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tv_xiaxian"
+            android:gravity="center"
+            android:text="您的账号已在另一设备登录"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/tv_msg"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/delete_confirm"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

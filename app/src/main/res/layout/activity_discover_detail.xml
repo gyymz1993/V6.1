@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="70dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32dp"
+                    android:background="@drawable/youliao_juxing"
+                    android:gravity="center"
+                    android:text="李晨奇"
+                    android:textColor="@color/white"
+                    android:textSize="7sp" />
+
+                <com.lsjr.zizisteward.newview.CircleImageView
+                    android:id="@+id/youliao_yuantu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="115dp"
+                    android:text="2015-20-12 12:12:12"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_pic_one"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/RelativeLayout1"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_pic_two"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/iv_pic_one"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_pic_two"
+                android:padding="10dp"
+                android:text="很少吃黑打死比比ID不低级别的记得很低递交电话IDIDHi好ID搞和山东宏达电话好好吃搜到偶收到后你还多少但是从电话" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout99"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content" >
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="356" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/tv_count"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <com.lsjr.zizisteward.newview.MyListView
+                android:id="@+id/listview_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeLayout99"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listview_comment"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/et_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/bt_send"
+                    android:background="@color/white"
+                    android:hint="发表评论"
+                    android:padding="5dp"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/bt_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="评论"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_pic_three"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/RelativeLayout4"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_photo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeLayout4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_pic_three" >
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:layout_width="80dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="#B79771"
+                    android:gravity="center"
+                    android:text="去购买" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我耳机菲菲欧ID发饿哦" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:text="￥464645" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

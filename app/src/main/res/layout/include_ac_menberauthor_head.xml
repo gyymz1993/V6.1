@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_318_dip"
+    android:background="@color/white"
+    android:clipChildren="false">
+
+    <!--是否限制子View在其范围内，我们将其值设置为false后那么当子控件的高度高于父控件时也会完全显示,而不会被压缩-->
+    <com.lsjr.zizisteward.ymz.custom.GalleryViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_210_dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_28_dip"
+        android:layout_marginLeft="@dimen/dimen_74_dip"
+        android:layout_marginRight="@dimen/dimen_74_dip"
+        android:layout_marginTop="@dimen/dimen_32_dip"
+        android:clipChildren="false"
+        android:overScrollMode="never" />
+
+    <ImageView
+        android:id="@+id/id_ig_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewpager"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:src="@drawable/triangle" />
+
+</RelativeLayout>

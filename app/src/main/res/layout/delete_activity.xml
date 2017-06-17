@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/ll_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"/>
+        
+    <TextView
+        android:id="@+id/tv_delete" 
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+	    android:text="删除联系人"
+	    android:textSize="18sp"
+	    android:textColor="#FF0000"/>
+        
+    <TextView 
+        android:id="@+id/tv_cancel"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:textSize="18sp"
+	    android:text="取消"
+	    android:textColor="#222222"/>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_out_backgroud"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/csio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="孜孜管家已经保存了您的生日哦"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/csio"
+            android:layout_marginRight="20dp"
+            android:padding="20dp"
+            android:text="好的"
+            android:textColor="#FAC300" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/common_bg"
+    android:orientation="horizontal"
+    android:paddingLeft="-80dp"
+    android:paddingRight="0dp" >
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="100dp" >
+
+        <RelativeLayout
+            android:id="@+id/delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/sample_delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/sample_selector" >
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="2016年6月18日" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/time"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="6月18家庭聚餐"
+                android:textColor="#B09367"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/residue_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/title"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="剩余10天5小时15分"
+                android:textColor="#B09367" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

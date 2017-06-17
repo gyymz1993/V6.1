@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lsjr.zizisteward">
+
+    <uses-sdk tools:overrideLibrary="com.easemob.redpacketui" />
+    <permission
+        android:name="com.lsjr.zizisteward.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- 极光推送的一些权限 -->
+    <uses-permission android:name="com.lsjr.zizisteward.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 二维码扫描权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 分享权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- Donut-specific flags which allow us to run on any dpi screens. -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_FIND_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".basic.App"
+        android:allowBackup="true"
+        android:icon="@drawable/zz_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+        tools:replace="Android:icon,android:theme">
+        <activity
+            android:name=".activity.StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="reversePortrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".receiver.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- 分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!--
+            	Adapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter的类，
+            	这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            <meta-data android:name="Adapter" android:value="cn.sharesdk.demo.MyAdapter" />
+            -->
+            <!-- 新浪微博分享 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--
+            	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+
+            <intent-filter>
+                <data android:scheme="tencent1105677331" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.lsjr.zizisteward.share.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!-- 银联支付配置文件 -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 银联支付配置文件 -->
+
+        <!-- 支付宝alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!-- 支付宝alipay sdk end -->
+
+        <activity android:name=".ymz.MemberAuthorityActivity"/>
+        <activity android:name=".ymz.MemberAuthorityDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NewCallStewardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" />
+        <!--<activity
+            android:name="com.zfdang.multiple_images_selector.ImagesSelectorActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.lsjr.zizisteward.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!--<activity
+            android:name="com.lsjr.zizisteward.photos.selector.ImagesSelectorActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.lsjr.zizisteward.lcq.activity.ShopAndFamousClassicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NoteLoginPromptBox"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NoteLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.lcq.activity.IntoIndentityConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.GroupAddFriend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NewInterestClassicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZeroToVipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NewShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MyCollection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MyAttention"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.Topic_Management"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GoodsEvaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SimpleVoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.InviteUsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShiShiSearchMoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ZiShangMoreLabelsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.NewShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ZiShangMoreNicksListAtivivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.FamousBrandClassicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShiShiLabelMoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShopAndBrand"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ServiceProjectWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.YuDingInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.SendShiShiRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ZiShangSearchNickAndLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.CareAndCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ReserveTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.InviteUsersDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ReserveCateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ReserveChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.SelectorAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShangXianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ReserveHealthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ZiShangSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.TestVoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShopAndBrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiShangDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PersonCenterPaySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SelectorPicturesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.UpdateApp"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.lcq.activity.SexSelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.FriendCircleSave"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SendFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.IdentityConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PersonalShiJieStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.JiangXinWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BannerWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CommonFeedBackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.OthersExampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.FeedBackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SendZiShangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.VipUpgradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ReservationSuccessTips"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EyeCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ShareCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TaoCanDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.ShiShiSearchFamousAndLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.RedPacketWeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ExperienceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ClassicEyeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.VipJARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ShareCollectDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NewIdentityAuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SmallZiZiCareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SendEvalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CollectDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.MyCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BasicWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.HotelDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ServiceProjectDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ComboDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SelectPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ProjectJARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mybetterandroid.wheel.other.WheelViewTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ActivityFriendsCircleDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ActivityChooseUploadPictures"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.DissolveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PersonImageSetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PicturesChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ForTimeBeing"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ReplaceTheCoverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.MoreQrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ChatAddMemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NotExpertReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PromptTalentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.HomeCallInstructionsPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ReadAddressBook"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.TalentShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ExpertReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.FoodDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.FoodToShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.WorldSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.photoflow.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.GroupShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.SendShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ShareDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.SelectEnterpriseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.CardQrCodeActivirty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ProfessionalCertificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MyContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.CardHolderDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.CardHolderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NewCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.FunctionalDevelopmentInterfaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.IdentityAuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MedicalAppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PhysicalExaminationMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MedicalBannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MedicalRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PhysicaDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MedicalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.MyQrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.QrCodeAddGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.QrCodePersonalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.QrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NewFriendWayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.GanapatiDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.InviteFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ActivityChoosePicture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.Fragment_Circle_Friends"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.AlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ManageAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.InviteFriends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ModifyNikeNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.SearchAddFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.AllGroupMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.GroupToIntroduceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ChooseBaskSingleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.FriendsCircleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.LookServiceProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.SendCircleFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NetworkInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.BuildGroupClassifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.NoLookFriendCircleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ImageFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EditEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EvaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BaskSingleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.PersonalInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ShowAllPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EditNickNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EditLoginPsdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.ActivitySeparateCircleFfriends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.BuySomeGroupInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.AboutZiZiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.MyAllOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SafeCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.AccreditAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PersonalSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.WaitPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PaidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.LookLogisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.LevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.OriginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.DestinationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.OrderTicketServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.HotelOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CarServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ServiceProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelOutDoorsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelDeepActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PersonalCenterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CallButtonActivtiy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.fragment.LookBackPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SettingPasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SettingLoginPsdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CallingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ClassicDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiZiLimitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EyeBoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.EditAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SonAccountPsdSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.fragment.BrandListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SearchBrandDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.KeyWordSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.HomeBrandDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CapacityCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ImmediateOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NewJARActivty"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx388b90f68846eb73" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lsjr.zizisteward.activity.JARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PaySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PaidOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.DiscoverDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TaiWanHealthTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BaskBrandDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.BatchDeleteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.lsjr.zizisteward.common.activtiy.IMZIVoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiXunActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ServicesJARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TradeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.WaitGetGoodsOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.WaitSendGoodsOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SendShiJieActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CreditPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.FeekBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ServiceClauseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CommonQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.RealNameConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.XieYiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BrandToGoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.StewardListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ExclusiveStewardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ShiJieDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.CustomTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelDepartmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.BusinessPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiZiRecommendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiZiWorldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.ZiZiPierreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.VipCrossActiviy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.DongTingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.OrderJARAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.PayDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.NumberSelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TimeSelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.SixthNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx388b90f68846eb73" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lsjr.zizisteward.activity.YangBenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.lsjr.zizisteward.activity.TravelBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.Activity_PopUpWindow"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.Activity_AddFriends"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.Activity_God"
+            android:theme="@style/DialogStyleBottom" />
+        <activity
+            android:name="com.lsjr.zizisteward.ly.activity.DeleteActivity"
+            android:theme="@style/DialogStyleBottom" />
+        <activity android:name="com.lsjr.zizisteward.quickcontacts.Activity_AddQuickContacts" />
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.AddContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"></activity>
+
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- 聊天室详情 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ChatRoomDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom"></activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.PickAtUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ContextMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle"></activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.PublicGroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.PublicChatRoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <!-- 语音通话 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.VoiceCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style"></activity>
+        <!-- 视频通话 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupSimpleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupBlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.GroupSearchMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.PublicGroupsSeachActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- choose video -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- robots list -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.RobotsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <!-- user profile -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.hyphenate.chatuidemo.receiver.StartServiceReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- gcm start -->
+        <receiver
+            android:name="com.hyphenate.chat.EMGCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.hyphenate.chatuidemo" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.hyphenate.chat.EMGCMListenerService"
+            android:exported="false"></service>
+
+        <receiver
+            android:name="com.hyphenate.chatuidemo.receiver.GCMPushBroadCast"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.hyphenate.sdk.push" />
+
+                <category android:name="com.hyphenate.chatuidemo" />
+            </intent-filter>
+        </receiver>
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="lisheng#lsjr" />
+
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.hyphenate.chat.EMChatService" />
+
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- umeng appkey，可忽略 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56aefe07e0f55a250d001a7c"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="hyphenate" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+
+        <!-- 极光 -->
+        <!-- jpush高级功能 -->
+        <!-- For test only 测试设置 -->
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity
+            android:name="com.lsjr.zizisteward.activity.Receive_Service_Activity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle"></activity>
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lsjr.zizisteward" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.lsjr.zizisteward" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.lsjr.zizisteward" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.lsjr.zizisteward.receiver.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.lsjr.zizisteward" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="66a63e3698b3c8b499b2a995" /> <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- 推送 -->
+    </application>
+
+</manifest>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/common_bg" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/coat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="衣"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/eat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="食"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/hourse"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="住"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/travel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="行"
+                android:textColor="@color/text_selector" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/common_bg" />
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/education"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="教育"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/oldMan"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="养老"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/hospital"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="医疗"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/yimin"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="移民"
+                android:textColor="@color/text_selector" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/common_bg" />
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/touzhi"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="投资"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="理财"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/fenxi"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分析"
+                android:textColor="@color/text_selector" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/common_bg" />
+
+            <TextView
+                android:id="@+id/guihua"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="规划"
+                android:textColor="@color/text_selector" />
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/common_bg" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <ImageView
+            android:id="@+id/iv_goup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/xiangshang" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/common_bg" />
+
+</LinearLayout>

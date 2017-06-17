@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_price_zishang" >
+
+        <RelativeLayout
+            android:id="@+id/re"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/upgrade" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="v1及以上会员具有发送孜赏权益" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_upgrade"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/re"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_bg"
+            android:gravity="center"
+            android:text="点击升级,开启孜赏"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/rl_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="30dp"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top|left"
+            android:textColor="#212121"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="#707070"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            android:layout_marginBottom="30dp"
+            android:textColor="#212121"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

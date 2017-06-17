@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg" >
+
+    <ListView
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:listSelector="@color/transparent" >
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay"
+        android:padding="10dp"
+        android:text="开启后，您将可以设置子账号，通过管理子账号，让子账号帮您完成下单、付款等。初始账号为您的账号名加后面的1、2、3"
+        android:textSize="10sp" />
+
+</RelativeLayout>

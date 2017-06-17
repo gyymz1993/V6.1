@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:id="@+id/gallery_viewpager_layout"
+    android:layout_width="match_parent"
+    android:layout_height="210dip"
+    android:clipChildren="false">
+
+        <!--是否限制子View在其范围内，我们将其值设置为false后那么当子控件的高度高于父控件时也会完全显示,而不会被压缩-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="230dp"
+            android:layout_height="150dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:clipChildren="false"
+            android:overScrollMode="never"/>
+
+
+</RelativeLayout>

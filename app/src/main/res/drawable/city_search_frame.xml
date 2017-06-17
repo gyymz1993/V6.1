@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke android:color="#d0d0d0" android:width="0.5dp"/>
+    <corners android:radius="20dp"/>
+    <solid android:color="#ffffff"/>
+</shape><!-- From: file:/D:/Saidys/app/src/main/res/drawable/city_search_frame.xml -->

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:visibility="gone"
+        android:layout_below="@id/rl_title"
+        android:id="@+id/ll_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_none_zizi"/>
+        
+        <TextView 
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#BCBCBC"
+            android:textSize="14sp"
+            android:text="您还没有收藏店铺哦~"/>
+    </LinearLayout>
+    
+    <com.lsjr.zizisteward.utils.PullToRefreshLayout
+        android:layout_below="@id/rl_title"
+        android:visibility="gone"
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.lsjr.zizisteward.utils.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+            
+            <com.lsjr.zizisteward.ly.activity.MyListView
+                android:id="@+id/mlv"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scrollbars="none"
+                android:listSelector="@android:color/transparent"/>
+            
+        </com.lsjr.zizisteward.utils.PullableScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/load_more" />
+            
+        </LinearLayout>
+        
+    </com.lsjr.zizisteward.utils.PullToRefreshLayout>
+    
+    <TextView 
+        android:id="@+id/tv_cancel"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff9900"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:text="取消收藏"/>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.lsjr.zizisteward1"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 6
+        versionName "1.0.5"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.3'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/alipaySdk-20170407.jar')
+    compile files('libs/bolts-tasks-1.4.0.jar')
+    compile files('libs/com.shove.play.jar')
+    compile files('libs/commons-lang3-3.1.jar')
+    compile files('libs/glide-3.7.0.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/hyphenatechat_3.1.4.jar')
+    compile files('libs/MobCommons-2016.0830.1940.jar')
+    compile files('libs/MobTools-2016.0830.1940.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/parse-android-1.13.0.jar')
+    compile files('libs/picasso-2.4.0.jar')
+    compile files('libs/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/UPPayPluginExPro.jar')
+    compile files('libs/volley.jar')
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile project(':zXing')
+    compile 'com.android.support:design:25.1.0'
+    compile files('libs/jcore-android_v1.1.3.jar')
+}

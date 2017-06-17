@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <RelativeLayout
+        android:id="@+id/re_back"
+        android:layout_width="100dp"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/title_back" />
+    </RelativeLayout>
+
+    <com.lsjr.zizisteward.newview.CircleImageView
+        android:id="@+id/iv_userIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/re_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_userIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="李晨奇"
+        android:textColor="#b79771" />
+
+    <TextView
+        android:id="@+id/tv_steward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/new_guanjia"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="专属管家"
+        android:textColor="#b79771"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_steward"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="李先生,您好!"
+        android:textColor="#b79771" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nick"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="很高兴为您服务,我是您的私人管家  李慧,按下呼叫管家,3分钟内我会用027——88300006拨打您的手机号码"
+        android:textColor="#b79771" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="您的手机号:"
+        android:textColor="#b79771" />
+
+    <EditText
+        android:id="@+id/et_cellphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:maxLength="11"
+        android:textColor="#b79771"
+        android:textColorHint="#b79771" />
+
+    <RelativeLayout
+        android:id="@+id/re_liuyan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_cellphone"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_xia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/new_xia"
+            android:drawablePadding="4dp"
+            android:text="我要留言"
+            android:textColor="#b79771"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_shang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/new_shang"
+            android:drawablePadding="4dp"
+            android:text="我要留言"
+            android:textColor="#b79771"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_liuyan"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/re_liuyan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请写下您的需求..."
+        android:maxLength="200"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_call"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tv_call"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="召唤私人管家"
+        android:textColor="#000000" />
+
+</RelativeLayout>

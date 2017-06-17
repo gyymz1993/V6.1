@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.zizisteward.view.refresh.SuperListView
+        android:id="@+id/listview_zishang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:id="@+id/add_zishang"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/send_zishang" />
+
+    <TextView
+        android:id="@+id/tv_no_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="该孜赏暂时没有内容..."
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+</RelativeLayout>

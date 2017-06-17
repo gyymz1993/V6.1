@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#000000" >
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_back" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我邀请的用户"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_add"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_menu_add" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="#efefef">
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:gravity="center">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前共邀请 "
+                    android:textSize="15sp"
+                    android:textColor="#999999"/>
+                
+                 <TextView 
+                     android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  "
+                    android:textSize="15sp"
+                    android:textColor="#003F00"/>
+                
+                 <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 位好友"
+                    android:textSize="15sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <com.lsjr.zizisteward.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_head" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.lsjr.zizisteward.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/ll_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+
+                <com.lsjr.zizisteward.MyListView
+                    android:id="@+id/mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:divider="@null"
+                    android:listSelector="@null"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </com.lsjr.zizisteward.PullableScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/load_more" />
+        </LinearLayout>
+    </com.lsjr.zizisteward.PullToRefreshLayout>
+
+</RelativeLayout>

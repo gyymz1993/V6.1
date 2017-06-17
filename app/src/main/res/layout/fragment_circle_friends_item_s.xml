@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFF"
+    android:descendantFocusability="blocksDescendants" >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/youliao_juxing"
+            android:gravity="center"
+            android:paddingLeft="35dp"
+            android:paddingRight="10dp"
+            android:text="凉薄de凉"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <com.lsjr.zizisteward.newview.CircleImageView
+            android:id="@+id/c_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="#222222"
+        android:textSize="15sp" />
+
+	<com.lsjr.zizisteward.newview.MyGridView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:layout_marginTop="10dp"/>
+    
+    <LinearLayout 
+        android:id="@+id/ll_content"
+        android:layout_below="@id/ll_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            
+            <TextView 
+                android:gravity="center_vertical"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"/>
+            
+            <LinearLayout 
+                android:visibility="gone"
+                android:id="@+id/ll_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                
+                <TextView 
+                    android:id="@+id/tv_delete"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222222"
+                    android:textSize="14sp"
+                    android:text="删除"/>
+                
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View 
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#efefef"/>
+
+</LinearLayout>

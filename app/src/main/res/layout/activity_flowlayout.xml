@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="00001"
+        />
+
+    <com.lsjr.zizisteward.ymz.custom.FlowLinearLayout
+        android:id="@+id/id_flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="vertical"
+        >
+
+    </com.lsjr.zizisteward.ymz.custom.FlowLinearLayout>
+
+</LinearLayout>

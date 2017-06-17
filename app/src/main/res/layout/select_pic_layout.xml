@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F0F0F0"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <View style="@style/LineHorizontalStyle" />
+
+        <Button
+            android:id="@+id/btn_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:padding="5dp"
+            android:text="拍照上传"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+
+        <View style="@style/LineHorizontalStyle" />
+
+        <Button
+            android:id="@+id/btn_pick_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:padding="5dp"
+            android:text="本地上传"
+            android:textColor="#177EFC"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:padding="5dp"
+            android:text="取消"
+            android:textColor="#177EFC"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京烤鸭"
+        android:textColor="@color/black" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:background="@color/common_bg" />
+
+    <TextView
+        android:id="@+id/tv_fenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view2"
+        android:layout_marginTop="5dp"
+        android:text="0.0分"
+        android:textColor="@color/black" />
+
+    <SeekBar
+        android:id="@+id/sb_brand"
+        style="@style/Widget.SeekBar.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fenshu"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_brand"
+        android:layout_centerInParent="true"
+        android:text="请滑动打分"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg" >
+
+    <EditText
+        android:id="@+id/new_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="新密码"
+        android:inputType="none"
+        android:maxLength="12"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/confirm_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_pass"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="确认新密码"
+        android:inputType="none"
+        android:maxLength="12"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_pass"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/login_btn_shape"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

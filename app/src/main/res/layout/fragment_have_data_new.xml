@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dinbu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/common_bg" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_change" >
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/all"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="全部"
+                        android:textColor="@color/yellow" />
+
+                    <TextView
+                        android:id="@+id/coat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="服装" />
+
+                    <TextView
+                        android:id="@+id/accessory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="配饰" />
+
+                    <TextView
+                        android:id="@+id/home"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="家居" />
+
+                    <TextView
+                        android:id="@+id/jewelry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="首饰" />
+
+                    <TextView
+                        android:id="@+id/watch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="腕表" />
+
+                    <TextView
+                        android:id="@+id/car"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="豪车" />
+
+                    <TextView
+                        android:id="@+id/plane"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="飞机" />
+
+                    <TextView
+                        android:id="@+id/yacht"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="游艇" />
+
+                    <TextView
+                        android:id="@+id/health_care"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="保健" />
+
+                    <TextView
+                        android:id="@+id/made"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="定制" />
+
+                    <TextView
+                        android:id="@+id/eat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="餐饮" />
+
+                    <TextView
+                        android:id="@+id/living"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="居家" />
+
+                    <TextView
+                        android:id="@+id/club"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:text="俱乐部" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/iv_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/xiangxia" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RelativeLayout1"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/youliao_shang"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="205dp"
+                android:src="@drawable/tuji" />
+
+            <TextView
+                android:id="@+id/tv_tianxia"
+                android:layout_width="70dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="223dp"
+                android:background="@drawable/youliao_juxing"
+                android:gravity="center"
+                android:text="天下独白"
+                android:textColor="@color/white"
+                android:textSize="7sp" />
+
+            <com.lsjr.zizisteward.newview.CircleImageView
+                android:id="@+id/youliao_yuantu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="210dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/youliao_shang"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="2010-8-23"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_pinglun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/youliao_pinglun" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/iv_pinglun"
+                    android:text="25"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_dianzan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/youliao_diaozan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_dianzan_count"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/touliao_diaozan" />
+
+                    <TextView
+                        android:id="@+id/tv_dianzan_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/youliao_xia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelativeLayout6"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

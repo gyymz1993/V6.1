@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_bg" >
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#262626"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_conversation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#383838"
+                android:drawableTop="@drawable/em_tab_chat_bg"
+                android:gravity="center"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="10dip"
+                android:scaleType="matrix"
+                android:text="消息"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/unread_msg_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="19dp"
+                    android:background="@drawable/em_unread_dot"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/btn_into_the_ring"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_ring"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#383838"
+                android:drawableTop="@drawable/em_tab_go_circle"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="10dip"
+                android:scaleType="matrix"
+                android:text="话题"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/unread_topic_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="19dp"
+                    android:background="@drawable/em_unread_dot"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/btn_circle_friends"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#383838"
+                android:drawableTop="@drawable/em_tab_circle_friend"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="10dip"
+                android:scaleType="matrix"
+                android:text="发现"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_address_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#383838"
+                android:drawableTop="@drawable/em_tab_contact_list_bg"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="10dip"
+                android:scaleType="matrix"
+                android:text="@string/address_book"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:gravity="right" >
+
+                    <TextView
+                        android:id="@+id/unread_address_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/red_background"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

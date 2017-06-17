@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_shane_ceshi"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black_deep">
+
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/title_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="孜赏详情"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/re_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/share_time" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_feedback"
+        android:layout_below="@+id/title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/re_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_feedback_number_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/toright_yellow" />
+
+                <com.lsjr.zizisteward.ly.activity.RoundImageView
+                    android:id="@+id/iv_name_photo_one"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv"
+                    android:scaleType="fitXY"
+                    app:borderRadius="100dp"
+                    app:type="round" />
+
+                <com.lsjr.zizisteward.ly.activity.RoundImageView
+                    android:id="@+id/iv_name_photo_three"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="-10dp"
+                    android:layout_toLeftOf="@+id/iv_name_photo_two"
+                    android:scaleType="fitXY"
+                    app:borderRadius="100dp"
+                    app:type="round" />
+
+                <com.lsjr.zizisteward.ly.activity.RoundImageView
+                    android:id="@+id/iv_name_photo_two"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignRight="@+id/iv_name_photo_one"
+                    android:layout_alignTop="@+id/iv_name_photo_one"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
+                    app:borderRadius="100dp"
+                    app:type="round" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_dangshiren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/re_title_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_feedback_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_toRightOf="@+id/re_name"
+                        android:background="@drawable/feedback"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text="反馈123条,打赏14笔"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/re_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="-25dp"
+                        android:layout_toRightOf="@+id/iv_name_photo"
+                        android:background="@drawable/nameandlevel"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="李晨奇"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_level"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tv_name"
+                            android:src="@drawable/level_one" />
+                    </RelativeLayout>
+
+                    <com.lsjr.zizisteward.ly.activity.RoundImageView
+                        android:id="@+id/iv_name_photo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"
+                        app:borderRadius="100dp"
+                        app:type="round" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/re_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="-15dp">
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="2015-05-15  21:21:21"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/zishang_state"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="未完成"
+                        android:textColor="#b79771"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/re_douzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/tv_shang"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/shangzi" />
+
+                    <TextView
+                        android:id="@+id/tv_douzi_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/tv_shang"
+                        android:text="12365"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="殴斗丁咚咚咚你度搜电脑搜都电脑搜ID谁弄得三农的涉农ID搜ID"
+                    android:textSize="13sp" />
+
+                <com.lsjr.zizisteward.newview.MyListView
+                    android:id="@+id/iv_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="10dp"
+                    android:divider="@color/white"
+                    android:dividerHeight="5dp"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/zishang_classic_new"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp"
+                        android:text="美味"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/tv_one"
+                        android:background="@drawable/zishang_classic_new"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp"
+                        android:text="美味"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/tv_two"
+                        android:background="@drawable/zishang_classic_new"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp"
+                        android:text="美味"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#B19274"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg" >
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="请输入您要设置的账户名"
+        android:padding="10dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_name"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:hint="请绑定手机号"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/re_kaiqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_number"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="开启" />
+
+        <ImageView
+            android:id="@+id/iv_kaiqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/safe_center_off" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bfi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_kaiqi"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="开启后，您将可以设置子账号，通过管理子账号让子账号帮您完成下单，付款等"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:id="@+id/re_quanxian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bfi"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/re_xiadan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="可下单" />
+
+            <ImageView
+                android:id="@+id/iv_xiadan_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/safe_center_off"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_xiadan_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/safe_center_on"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_xiadan"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="可付款" />
+
+            <ImageView
+                android:id="@+id/iv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dagou" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

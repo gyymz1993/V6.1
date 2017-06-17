@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000">
+        
+        <LinearLayout 
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/title_back"/>
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名片夹"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+        
+        <LinearLayout 
+            android:id="@+id/ll_add"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_card_add"/>
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/ll_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+        
+        <ImageView 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_card_contacts"/>
+        
+        <TextView 
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#525252"
+            android:text="我的人脉"/>
+        
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#efefef"/>
+    
+    <com.lsjr.zizisteward.slide.SlideListView
+        xmlns:slide="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        slide:slideLeftAction="scroll"
+        android:divider="@null"
+        android:background="@null"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        slide:slideMode="right"/>
+    
+    <LinearLayout 
+        android:id="@+id/ll_new_add"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <ImageView 
+            android:layout_marginLeft="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_card_heard"/>
+        
+        <TextView 
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="新增我的电子名片"
+            android:textColor="#525252"
+            android:textSize="16sp"/>
+        
+        <ImageView 
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_card_right_arrow"/>
+        
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8D8D8"/>
+
+</LinearLayout>

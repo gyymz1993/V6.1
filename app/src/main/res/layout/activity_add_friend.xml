@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#383838"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/et_search"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"/>
+
+            <LinearLayout
+                android:id="@+id/ll_clear"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_clear" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    
+    <ListView 
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="@null"
+        android:divider="@null"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="添加好友前应向对方索要邀请码，邀请码在个人中心邀请好友中获得"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="邀请码无效"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

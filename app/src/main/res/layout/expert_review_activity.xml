@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#efefef">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000">
+        
+        <LinearLayout 
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/title_back"/>
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="达人点评"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"/>
+        
+        <LinearLayout 
+            android:id="@+id/ll_sure"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布"
+                android:textColor="#F5A623"
+                android:textSize="14sp"/>
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+    <GridView 
+        android:id="@+id/gv"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:numColumns="4"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="7dp"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    
+	<EditText
+	    android:id="@+id/et" 
+	    android:layout_width="match_parent"
+	    android:layout_height="200dp"
+	    android:background="#ffffff"
+	    android:gravity="left"
+	    android:textColorHint="#c3c3c3"
+	    android:textSize="14sp"
+	    android:padding="10dp"
+	    android:hint="请写下您的用餐感受（据说美食达人对美食可是有说不完的话呢 ~）"/>    
+</LinearLayout>

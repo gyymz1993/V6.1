@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_zuijin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/hot_search"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:text="书包"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

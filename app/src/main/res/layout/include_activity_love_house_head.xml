@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_217_dip">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_container_indictor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60_dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:drawableLeft="@drawable/group_love_home"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:text="爱家服务"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_105_dip"
+        android:layout_marginTop="@dimen/dimen_2_dip"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_ig_designer"
+                android:drawablePadding="15dip"
+                android:gravity="center_vertical"
+                android:text="名师设计"
+                android:textColor="@color/colorblack"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_2_dip"
+            android:layout_height="match_parent"
+            android:background="@color/common_bg" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_ig_steward"
+                android:drawablePadding="15dip"
+                android:gravity="center_vertical"
+                android:text="精装管家"
+                android:textColor="@color/colorblack"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60_dip"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:drawableLeft="@drawable/group_space"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:text="空间大师"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_tv_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dip"
+            android:gravity="right|center_vertical"
+            android:padding="5dip"
+            android:text="更多"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_410_dip"
+        android:layout_marginTop="@dimen/dimen_2_dip"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/while_btn_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与非[价格1500/m]" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:lines="3"
+                android:text=" 都是文字都是文字" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dip"
+            android:layout_height="match_parent"
+            android:background="@color/common_bg" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/while_btn_shape"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.lsjr.zizisteward.ly.activity.RoundImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="10dip"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与非[价格1500/m]" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:lines="3"
+                android:text=" 都是文字都是文字" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60_dip"
+        android:layout_marginTop="8dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:drawableLeft="@drawable/group_home_thing"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:text="居家好物"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_242_dip"
+        android:layout_marginTop="1dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/id_hs_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_84_dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/group_left"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/group_right"
+            android:gravity="center"
+            android:text="最热"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

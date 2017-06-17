@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/it_tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:text="@string/tag_hint" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

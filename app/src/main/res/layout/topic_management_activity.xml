@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" >
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/title_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_control"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="#FF9900" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#ffffff" >
+
+        <com.lsjr.zizisteward.ly.activity.MyGridView
+            android:id="@+id/mgv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:numColumns="3" />
+        
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_delete"
+            android:layout_width="match_parent"
+             android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content">
+            
+            <LinearLayout 
+                android:layout_centerInParent="true"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_topic_backgroup"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="删除"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"/>
+                
+                <View 
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"/>
+                
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="取消"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"/>
+                
+            </LinearLayout>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#efefef" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_ban"
+            android:layout_marginLeft="25dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="禁止互加好友"
+            android:textColor="#ff9900"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_topic_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

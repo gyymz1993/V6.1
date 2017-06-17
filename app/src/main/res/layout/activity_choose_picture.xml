@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000">
+        
+        <LinearLayout
+            android:id="@+id/ll_back" 
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/title_back"/>
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:text="设置话题资料"/>
+        
+    </RelativeLayout>
+    
+	<ImageView 
+	    android:id="@+id/iv"
+	    android:layout_marginTop="30dp"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    android:scaleType="fitXY"
+	    android:src="@drawable/icon_group_add"/>  
+	    
+	<EditText 
+	    android:id="@+id/et"
+	    android:gravity="center"
+	    android:layout_marginTop="40dp"
+	    android:layout_marginLeft="50dp"
+	    android:layout_marginRight="50dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="填写群名称  (2~10个字)"
+	    android:maxLength="10"
+	    android:maxLines="1"
+	    android:singleLine="true"
+	    android:background="@null"/>
+	
+	<ImageView 
+	    android:layout_marginLeft="50dp"
+	    android:layout_marginRight="50dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/icon_edittext_background"/>
+	
+	<Button 
+	    android:id="@+id/btn"
+	    android:layout_marginTop="50dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_marginRight="40dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="下一步"
+	    android:textSize="16sp"
+	    android:textColor="#FFFFFF"
+	    android:background="@drawable/icon_join"/>
+
+</LinearLayout>

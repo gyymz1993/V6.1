@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="请选择相关身份" />
+
+            <com.lsjr.zizisteward.newview.MyGridView
+                android:id="@+id/gv_shenfen_sel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="true"
+                android:horizontalSpacing="4dp"
+                android:numColumns="4"
+                android:padding="15dp"
+                android:verticalSpacing="5dp" />
+
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gv_shenfen_sel"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="left"
+                android:hint="填写相关证件号(选填)"
+                android:maxLines="1"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="相关证件照片"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <com.lsjr.zizisteward.newview.MyGridView
+                    android:id="@+id/gv_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/re_agree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="我已同意孜孜管家身份认证条例"
+                    android:textColor="#bcbcbc"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_agree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/text"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/send_shishi_agree"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_disagree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/text"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/send_shishi_disagree" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#202020"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</RelativeLayout>

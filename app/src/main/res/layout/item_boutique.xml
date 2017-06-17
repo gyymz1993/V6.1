@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp" >
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rela_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#343434"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="营养保健"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Health Care"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <com.lsjr.zizisteward.newview.MyGridView
+            android:id="@+id/gv_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela"
+            android:numColumns="3"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</RelativeLayout>

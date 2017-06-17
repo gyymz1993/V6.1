@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:id="@+id/video_data_area"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_data_area"
+        android:padding="10dp" >
+
+        <com.lsjr.zizisteward.newview.CircleImageView
+            android:id="@+id/photo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/photo" >
+
+            <TextView
+                android:id="@+id/tv_comment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李晨奇"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_comment_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_comment_name"
+                android:text="答复后后悔偶的符合噢诶发"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2016-09-12 12:12:12"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
