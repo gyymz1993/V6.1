@@ -32,7 +32,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/abput_zizi" />
+            android:src="@drawable/luxury_service" />
 
         <TextView
             android:layout_width="match_parent"
@@ -54,6 +54,7 @@
         android:orientation="horizontal">
 
         <RelativeLayout
+            android:id="@+id/re_luxury_consignment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -61,11 +62,11 @@
 
             <ImageView
                 android:id="@+id/iv_ji"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/user_head" />
+                android:src="@drawable/luxury_jishou" />
 
 
             <TextView
@@ -95,7 +96,7 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/user_head" />
+                android:src="@drawable/luxury_huli" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,7 +124,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/abput_zizi" />
+            android:src="@drawable/luxury_classic" />
 
         <TextView
             android:layout_width="match_parent"
@@ -168,7 +169,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/abput_zizi" />
+            android:src="@drawable/most_new_load" />
 
         <TextView
             android:layout_width="match_parent"
@@ -184,7 +185,52 @@
         android:layout_height="1dp"
         android:background="@color/common_bg" />
 
-  S
+    <HorizontalScrollView
+        android:id="@+id/hsl_most_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
+        <LinearLayout
+            android:id="@+id/ll_parent_most_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="最热"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_hot"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shuixian_left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_hot"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shuixian_right" />
+    </RelativeLayout>
 
 </LinearLayout>

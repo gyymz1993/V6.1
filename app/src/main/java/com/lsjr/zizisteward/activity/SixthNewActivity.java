@@ -43,12 +43,12 @@ import com.lsjr.zizisteward.R;
 import com.lsjr.zizisteward.activity.RealNameConfirmActivity.StateBean;
 import com.lsjr.zizisteward.basic.App;
 import com.lsjr.zizisteward.bean.ShareTime;
-import com.lsjr.zizisteward.fragment.F_FoodHomeActivity;
-import com.lsjr.zizisteward.fragment.F_MedicalHomeActivity;
-import com.lsjr.zizisteward.fragment.F_TravelExpertsActivity;
-import com.lsjr.zizisteward.fragment.JiangPinFragment;
-import com.lsjr.zizisteward.fragment.NewHomeFragment;
+import com.lsjr.zizisteward.fragment.CateFragment;
+import com.lsjr.zizisteward.fragment.NewHealthFragment;
+import com.lsjr.zizisteward.fragment.NewJiangSampleFragment;
 import com.lsjr.zizisteward.fragment.NewLuxuryFragment;
+import com.lsjr.zizisteward.fragment.NewMainFragment;
+import com.lsjr.zizisteward.fragment.TravelFragment;
 import com.lsjr.zizisteward.http.HttpClientGet;
 import com.lsjr.zizisteward.ly.activity.CardHolderDetails;
 import com.lsjr.zizisteward.ly.activity.NoteLoginActivity;
@@ -128,17 +128,23 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
             re_fashion, mRe_food, mRe_family;
     private LinearLayout mLl_group;
 
-    private JiangPinFragment frag1;// 匠品
-//    private ShePinFragment frag2;// 奢品
-    private F_TravelExpertsActivity frag3;// 出行
-    private NewHomeFragment frag4;// 首页
-    private F_FoodHomeActivity frag5;// 美食
-    private F_MedicalHomeActivity frag6;// 健康
+//    private JiangPinFragment frag1;// 匠品
+    //    private ShePinFragment frag2;// 奢品
+//    private F_TravelExpertsActivity frag3;// 出行
+//        private NewHomeFragment frag4;// 首页
+//    private F_FoodHomeActivity frag5;// 美食
+//    private F_MedicalHomeActivity frag6;// 健康
     //private HuoseInheritFragment frag7;// 家族
     private LoveHouseFragment frag7;// 家族
-    /*新版首页改版*/
-//    private LuxuryFragment frag2;/*奢品*/
+
+    /*新版首页各大模块改版*/
+    private NewJiangSampleFragment frag1;/*匠品*/
     private NewLuxuryFragment frag2;/*奢品*/
+    private TravelFragment frag3;/*出行*/
+    private NewMainFragment frag4;/*首页*/
+    private CateFragment frag5;/*美食*/
+    private NewHealthFragment frag6;/*健康*/
+
     private HorizontalScrollView hsl_images;
     private Intent mIntent;
     private Boolean isExit = false;
@@ -331,7 +337,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                 if (re_home.getVisibility() == View.VISIBLE) {// 不在首页这里
                     mPerformClick = re_home.performClick();
                     if (frag4 == null) {
-                        frag4 = new NewHomeFragment();
+                        frag4 = new NewMainFragment();
                         FragmentTransaction transaction = mManager.beginTransaction();
                         transaction.add(R.id.fl, frag4, null);
                         transaction.show(frag4);
@@ -451,7 +457,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                 if (re_home.getVisibility() == View.VISIBLE) { // 不在首页这里
                     mPerformClick = re_home.performClick();
                     if (frag4 == null) {
-                        frag4 = new NewHomeFragment();
+                        frag4 = new NewMainFragment();
                         FragmentTransaction transaction = mManager.beginTransaction();
                         transaction.add(R.id.fl, frag4, null);
                         transaction.show(frag4);
@@ -505,7 +511,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                 if (re_home.getVisibility() == View.VISIBLE) {// 不在首页这里
                     mPerformClick = re_home.performClick();
                     if (frag4 == null) {
-                        frag4 = new NewHomeFragment();
+                        frag4 = new NewMainFragment();
 
                         FragmentTransaction transaction = mManager.beginTransaction();
                         transaction.add(R.id.fl, frag4, null);
@@ -565,7 +571,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
     private void init() {
         mPerformClick = re_home.performClick();
         if (frag4 == null) {
-            frag4 = new NewHomeFragment();
+            frag4 = new NewMainFragment();
             FragmentTransaction transaction = mManager.beginTransaction();
             transaction.add(R.id.fl, frag4, null);
             transaction.show(frag4);
@@ -614,7 +620,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                     re_vip_selectd.setVisibility(View.VISIBLE);
                     mRe_vip.setVisibility(View.GONE);
                     if (frag1 == null) {
-                        frag1 = new JiangPinFragment();
+                        frag1 = new NewJiangSampleFragment();
                         mTransaction.add(R.id.fl, frag1, null);
                     }
 
@@ -672,7 +678,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                     re_travel_sel.setVisibility(View.VISIBLE);
                     re_travel.setVisibility(View.GONE);
                     if (frag3 == null) {
-                        frag3 = new F_TravelExpertsActivity();
+                        frag3 = new TravelFragment();
                         mTransaction.add(R.id.fl, frag3, null);
                     }
 
@@ -702,7 +708,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                     re_home_selector.setVisibility(View.VISIBLE);
                     re_home.setVisibility(View.GONE);
                     if (frag4 == null) {
-                        frag4 = new NewHomeFragment();
+                        frag4 = new NewMainFragment();
                         mTransaction.add(R.id.fl, frag4, null);
                     }
 
@@ -731,7 +737,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                     re_food_sel.setVisibility(View.VISIBLE);
                     re_food.setVisibility(View.GONE);
                     if (frag5 == null) {
-                        frag5 = new F_FoodHomeActivity();
+                        frag5 = new CateFragment();
                         mTransaction.add(R.id.fl, frag5, null);
                     }
 
@@ -760,7 +766,7 @@ public class SixthNewActivity extends FragmentActivity implements OnClickListene
                     re_health_sel.setVisibility(View.VISIBLE);
                     re_health.setVisibility(View.GONE);
                     if (frag6 == null) {
-                        frag6 = new F_MedicalHomeActivity();
+                        frag6 = new NewHealthFragment();
                         mTransaction.add(R.id.fl, frag6, null);
                     }
 

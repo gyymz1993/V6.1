@@ -24,7 +24,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="5dip"
+            >
 
             <ImageView
                 android:id="@+id/id_ig_item_mem"
@@ -35,7 +37,9 @@
                 android:layout_weight="1"
                 android:src="@drawable/leve_test" />
 
+            <!--android:includeFontPadding="false"清除两边空白-->
             <TextView
+                android:includeFontPadding="false"
                 android:id="@+id/id_tv_item_mem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

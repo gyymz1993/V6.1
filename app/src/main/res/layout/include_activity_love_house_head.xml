@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_217_dip">
+        android:layout_height="150dip">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/id_viewpager"
@@ -23,7 +23,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_60_dip"
+        android:layout_height="50dip"
         android:background="@color/white">
 
         <TextView
@@ -41,8 +41,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_105_dip"
-        android:layout_marginTop="@dimen/dimen_2_dip"
+        android:layout_height="70dip"
+        android:layout_marginTop="2dip"
         android:background="@color/white"
         android:orientation="horizontal">
 
@@ -67,7 +67,7 @@
 
 
         <LinearLayout
-            android:layout_width="@dimen/dimen_2_dip"
+            android:layout_width="1dip"
             android:layout_height="match_parent"
             android:background="@color/common_bg" />
 
@@ -96,7 +96,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_60_dip"
+        android:layout_height="40dip"
         android:layout_marginTop="8dp"
         android:background="@color/white">
 
@@ -125,82 +125,25 @@
     </RelativeLayout>
 
 
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_410_dip"
-        android:layout_marginTop="@dimen/dimen_2_dip"
-        android:orientation="horizontal">
-
-
-        <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/while_btn_shape"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <com.lsjr.zizisteward.ly.activity.RoundImageView
-                android:layout_width="match_parent"
-                android:layout_height="60dip"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dip"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="与非[价格1500/m]" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:lines="3"
-                android:text=" 都是文字都是文字" />
-        </LinearLayout>
+        android:layout_height="220dip"
+        android:layout_marginTop="1dip"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="2dip"
+            android:id="@+id/id_recomend_container"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/common_bg" />
+            android:background="@color/white"
+            android:orientation="horizontal" />
 
-        <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/while_btn_shape"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <com.lsjr.zizisteward.ly.activity.RoundImageView
-                android:layout_width="match_parent"
-                android:layout_height="60dip"
-                android:layout_marginTop="10dip"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="与非[价格1500/m]" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:lines="3"
-                android:text=" 都是文字都是文字" />
-        </LinearLayout>
-    </LinearLayout>
+    </HorizontalScrollView>
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_60_dip"
+        android:layout_height="40dip"
         android:layout_marginTop="8dip"
         android:background="@color/white">
 
@@ -219,7 +162,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_242_dip"
+        android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:scrollbars="none">
 
@@ -235,7 +178,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_84_dip"
+        android:layout_height="55dip"
         android:gravity="center"
         android:orientation="vertical">
 

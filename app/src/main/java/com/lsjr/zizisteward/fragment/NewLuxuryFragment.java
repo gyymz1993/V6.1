@@ -29,6 +29,7 @@ import com.lsjr.zizisteward.http.HttpClientGet;
 import com.lsjr.zizisteward.http.HttpConfig;
 import com.lsjr.zizisteward.lcq.activity.BannerViewPager;
 import com.lsjr.zizisteward.lcq.activity.CustomGifHeader;
+import com.lsjr.zizisteward.lcq.activity.MostNewDetailActivity;
 import com.lsjr.zizisteward.utils.GsonUtil;
 import com.lsjr.zizisteward.utils.ToastUtils;
 
@@ -40,7 +41,7 @@ import java.util.List;
  * Created by Administrator on 2017/6/12.
  */
 
-public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChangeListener {
+public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChangeListener, View.OnClickListener {
     private View rootView;
     private XRefreshView xrefreshview;
     private RecyclerView recyclerview;
@@ -126,18 +127,12 @@ public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChang
     }
 
     private HorizontalScrollView hsl;
-    private LinearLayout ll_parent;
-    private RelativeLayout re_classic_licqi;
+    private LinearLayout ll_parent, ll_parent_most_new;
+    private RelativeLayout re_luxury_consignment;
     private ImageView iv_classic_licqi;
     private TextView tv_classic_licqi;
-    private View view_licqi;
-    private RelativeLayout[] re_nums;
-    private ImageView[] iv_nums;
-    private TextView[] tv_nums;
-    private View[] view_nums;
     private String[] titles = {"配饰", "服饰", "美妆", "健康", "医疗", "美食", "李晨奇", "李慧"};
     private int[] images = {R.drawable.user_head, R.drawable.user_head, R.drawable.user_head, R.drawable.user_head, R.drawable.user_head, R.drawable.user_head, R.drawable.user_head, R.drawable.user_head};
-    private View views[];
 
     private void initLayout() {
         adapter_luxury = new NewLuxuryAdapter(getContext(), list);
@@ -156,30 +151,27 @@ public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChang
         viewpager = (BannerViewPager) headerView.findViewById(R.id.viewpager);
         ll_add_imageview = (LinearLayout) headerView.findViewById(R.id.ll_add_imageview);
         hsl = (HorizontalScrollView) headerView.findViewById(R.id.hsl);
-        ll_parent = (LinearLayout) headerView.findViewById(R.id.ll_parent);
+        ll_parent = (LinearLayout) headerView.findViewById(R.id.ll_parent);/*奢品分类*/
+        ll_parent_most_new = (LinearLayout) headerView.findViewById(R.id.ll_parent_most_new);/*最新上架*/
+        re_luxury_consignment = (RelativeLayout) headerView.findViewById(R.id.re_luxury_consignment);/*奢品寄售*/
+
          /*奢品分类*/
-        views = new View[titles.length];
-        re_nums = new RelativeLayout[titles.length];
-        iv_nums = new ImageView[titles.length];
-        tv_nums = new TextView[titles.length];
-        view_nums = new View[titles.length];
         for (int i = 0; i < titles.length; i++) {
             View view = LayoutInflater.from(getContext()).inflate(R.layout.luxury_classic, null);
             view.setId(i);
-            re_classic_licqi = (RelativeLayout) view.findViewById(R.id.re_classic_licqi);
+            view.setOnClickListener(LiChenQiListener);
             iv_classic_licqi = (ImageView) view.findViewById(R.id.iv_classic_licqi);
             tv_classic_licqi = (TextView) view.findViewById(R.id.tv_classic_licqi);
-            view_licqi = view.findViewById(R.id.view_licqi);
             iv_classic_licqi.setImageResource(images[i]);
             tv_classic_licqi.setText(titles[i]);
             ll_parent.addView(view);
+        }
 
-            re_nums[i] = re_classic_licqi;
-            iv_nums[i] = iv_classic_licqi;
-            tv_nums[i] = tv_classic_licqi;
-            view_nums[i] = view_licqi;
-            views[i] = view;
-
+        /*最新上架*/
+        for (int i = 0; i < 5; i++) {
+            View view = LayoutInflater.from(getContext()).inflate(R.layout.luxury_most_new_load, null);
+            view.setId(i);
+            ll_parent_most_new.addView(view);
         }
 
         initViewPager();
@@ -211,7 +203,30 @@ public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChang
                 getData(pageNum, 2);
             }
         });
+        initListener();
     }
+
+    private void initListener() {
+        re_luxury_consignment.setOnClickListener(this);
+    }
+
+    private View.OnClickListener LiChenQiListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            ToastUtils.show(getActivity(), "当前第" + v.getId() + "个");
+        }
+    };
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.re_luxury_consignment:
+                Intent intent = new Intent(getContext(), MostNewDetailActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
 
     private void initViewPager() {
         indicators = new ImageView[list_banner.size()];
@@ -349,25 +364,12 @@ public class NewLuxuryFragment extends Fragment implements ViewPager.OnPageChang
                 @Override
                 public void onClick(View v) {
                     mIntent = new Intent(getContext(), TravelWebViewActivity.class);
-                    if (position == 0) {
-                        mIntent.putExtra("url", list_banner.get(0).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 1) {
-                        mIntent.putExtra("url", list_banner.get(1).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 2) {
-                        mIntent.putExtra("url", list_banner.get(2).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 3) {
-                        mIntent.putExtra("url", list_banner.get(3).getUrl());
-                        mIntent.putExtra("title", "home");
-                    }
+                    mIntent.putExtra("url", list_banner.get(position).getUrl());
+                    mIntent.putExtra("title", "home");
                     startActivity(mIntent);
                 }
             });
-
             return iv;
-
         }
     }
 

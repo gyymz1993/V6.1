@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -16,8 +17,10 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.lsjr.zizisteward.R;
 import com.lsjr.zizisteward.http.HttpConfig;
+import com.lsjr.zizisteward.utils.L;
 import com.lsjr.zizisteward.ymz.bean.BenefitsBean;
 import com.lsjr.zizisteward.ymz.inter.RecycleViewItemListener;
+import com.lsjr.zizisteward.ymz.utils.DisplayUtils;
 
 import java.util.List;
 
@@ -71,7 +74,7 @@ public class MemberAuthorAdapter extends RecyclerView.Adapter<MemberAuthorAdapte
             public void onResourceReady(Bitmap bitmap, GlideAnimation<? super Bitmap> glideAnimation) {
                 Drawable drawable=new BitmapDrawable(bitmap);
                 drawable.setBounds(0,0,bitmap.getWidth(),bitmap.getHeight());
-                holder.tvType.setCompoundDrawablesWithIntrinsicBounds(drawable,null,null,null);
+                holder.tvType.setCompoundDrawables(drawable,null,null,null);
             }
         });
 

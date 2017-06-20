@@ -85,7 +85,6 @@ public class MemberItemAdapter extends RecyclerView.Adapter<MemberItemAdapter.Vi
         holder.rootLy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                L.e("点击点击");
                 if (recycleViewItemListener != null) {
                     recycleViewItemListener.onItemClick(mdata.get(position).getEntityId());
                 }
@@ -121,7 +120,6 @@ public class MemberItemAdapter extends RecyclerView.Adapter<MemberItemAdapter.Vi
     }
 
     RecycleViewItemListener recycleViewItemListener;
-
     public void setRecycleViewItemListener(RecycleViewItemListener recycleViewItemListener) {
         this.recycleViewItemListener = recycleViewItemListener;
     }

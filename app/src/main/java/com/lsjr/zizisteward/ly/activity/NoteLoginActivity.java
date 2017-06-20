@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,10 +44,8 @@ import com.lsjr.zizisteward.utils.GsonUtil;
 import com.lsjr.zizisteward.utils.PreferencesUtils;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -60,7 +57,8 @@ import cn.jpush.android.api.JPushInterface;
  */
 
 public class NoteLoginActivity extends Activity implements View.OnClickListener {
-
+    /*取消按钮*/
+    private TextView ly_cancel;
     /**
      * 手机号
      */
@@ -133,6 +131,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
     }
 
     private void findViewById() {
+        this.ly_cancel = (TextView) super.findViewById(R.id.ly_cancel);
         this.v_code = super.findViewById(R.id.v_code);
         this.v_phone = super.findViewById(R.id.v_phone);
         this.cb = (CheckBox) super.findViewById(R.id.cb);
@@ -150,6 +149,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
         this.tv_code.setOnClickListener(this);
         this.tv_submit.setOnClickListener(this);
         this.tv_explain.setOnClickListener(this);
+        this.ly_cancel.setOnClickListener(this);
 
         this.tv_code.setClickable(false);
         this.tv_submit.setClickable(false);
@@ -321,9 +321,9 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
 
     private void setOldTime() {
         //日期
-        String old_date = PreferencesUtils.getString(NoteLoginActivity.this,"login_date");
+        String old_date = PreferencesUtils.getString(NoteLoginActivity.this, "login_date");
         //秒数
-        String old_time = PreferencesUtils.getString(NoteLoginActivity.this,"login_time");
+        String old_time = PreferencesUtils.getString(NoteLoginActivity.this, "login_time");
 
         if (null != old_time && !old_time.equals("0")) {
 
@@ -360,7 +360,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                     int n_s = Integer.valueOf(n_minute) * 60 + Integer.valueOf(n_second);
                     int o_s = Integer.valueOf(o_minute) * 60 + Integer.valueOf(o_second);
 
-                    if ( n_s > o_s) {
+                    if (n_s > o_s) {
 
                         if (n_s - o_s >= 60) {
                             _old = false;
@@ -380,10 +380,10 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                             }
                         }
 
-                    } else if ( n_s == o_s) {
+                    } else if (n_s == o_s) {
                         _old = false;
                         time = new TimeCount(60000, 1000);
-                    } else if ( n_s < o_s) {
+                    } else if (n_s < o_s) {
                         _old = false;
                         time = new TimeCount(60000, 1000);
                     }
@@ -448,7 +448,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                     _error++;
                 }
 
-                PreferencesUtils.putString(NoteLoginActivity.this,"login_error",returnDate() + "," + _error);
+                PreferencesUtils.putString(NoteLoginActivity.this, "login_error", returnDate() + "," + _error);
 
                 super.onFailure(myError);
             }
@@ -516,6 +516,9 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                 //协议
                 startActivity(new Intent(NoteLoginActivity.this, XieYiActivity.class));
                 break;
+            case R.id.ly_cancel:
+                finish();
+                break;
         }
     }
 
@@ -550,7 +553,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
             }
 
         } else {
-            startActivityForResult(new Intent(NoteLoginActivity.this,NoteLoginPromptBox.class).putExtra("action","deal"), 2);
+            startActivityForResult(new Intent(NoteLoginActivity.this, NoteLoginPromptBox.class).putExtra("action", "deal"), 2);
         }
 
     }
@@ -620,12 +623,12 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
     @Override
     protected void onDestroy() {
         if (time != null) {
-            PreferencesUtils.putString(NoteLoginActivity.this,"login_date",returnTime());
+            PreferencesUtils.putString(NoteLoginActivity.this, "login_date", returnTime());
 
             if (space) {
-                PreferencesUtils.putString(NoteLoginActivity.this,"login_time",tv_code.getText().toString().substring(0,tv_code.getText().toString().length() - 1));
+                PreferencesUtils.putString(NoteLoginActivity.this, "login_time", tv_code.getText().toString().substring(0, tv_code.getText().toString().length() - 1));
             } else {
-                PreferencesUtils.putString(NoteLoginActivity.this,"login_time","0");
+                PreferencesUtils.putString(NoteLoginActivity.this, "login_time", "0");
             }
             time.cancel();
         }
@@ -786,7 +789,7 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
     }
 
     private void setIvCodeShow() {
-        String login_error = PreferencesUtils.getString(NoteLoginActivity.this,"login_error");
+        String login_error = PreferencesUtils.getString(NoteLoginActivity.this, "login_error");
 
         if (null != login_error && login_error.length() > 0) {
             String[] l_e = login_error.split(",");
@@ -798,6 +801,8 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                 _error = Integer.valueOf(error_n);
 
                 if (_error >= 2) {
+
+
                     ll_code.setVisibility(View.GONE);
                     ll_iv_code.setVisibility(View.VISIBLE);
                 } else {
@@ -805,13 +810,15 @@ public class NoteLoginActivity extends Activity implements View.OnClickListener 
                     ll_iv_code.setVisibility(View.GONE);
                 }
             } else {
-                PreferencesUtils.putString(NoteLoginActivity.this,"login_error", returnDate() + "," +"0");
+                PreferencesUtils.putString(NoteLoginActivity.this, "login_error", returnDate() + "," + "0");
+                PreferencesUtils.putString(NoteLoginActivity.this, "login_error", returnDate() + "," + "0");
                 _error = 0;
                 ll_code.setVisibility(View.VISIBLE);
                 ll_iv_code.setVisibility(View.GONE);
             }
         } else {
-            PreferencesUtils.putString(NoteLoginActivity.this,"login_error",returnDate() + "," +"0");
+            PreferencesUtils.putString(NoteLoginActivity.this, "login_error", returnDate() + "," + "0");
+            PreferencesUtils.putString(NoteLoginActivity.this, "login_error", returnDate() + "," + "0");
             _error = 0;
             ll_code.setVisibility(View.VISIBLE);
             ll_iv_code.setVisibility(View.GONE);

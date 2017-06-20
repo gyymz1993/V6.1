@@ -20,15 +20,21 @@ import android.widget.TextView;
 
 import com.andview.refreshview.XRefreshView;
 import com.andview.refreshview.XRefreshViewFooter;
+import com.bumptech.glide.Glide;
 import com.lsjr.zizisteward.R;
+import com.lsjr.zizisteward.activity.TravelWebViewActivity;
 import com.lsjr.zizisteward.fragment.ShePinFragment;
 import com.lsjr.zizisteward.http.HttpClientGet;
 import com.lsjr.zizisteward.http.HttpConfig;
+import com.lsjr.zizisteward.ly.activity.RoundImageView;
+import com.lsjr.zizisteward.utils.DensityUtil;
 import com.lsjr.zizisteward.utils.GsonUtil;
 import com.lsjr.zizisteward.utils.L;
 import com.lsjr.zizisteward.utils.ToastUtils;
 import com.lsjr.zizisteward.ymz.adapter.BannerViewPagerAdapter;
 import com.lsjr.zizisteward.ymz.adapter.LoveHouseAdapter;
+import com.lsjr.zizisteward.ymz.bean.LoveHouseBean;
+import com.lsjr.zizisteward.ymz.utils.DisplayUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,17 +47,24 @@ import java.util.List;
 
 public class LoveHouseFragment extends Fragment {
 
-    private List<ShePinFragment.DataList> mdata;
     private View headView;
     private XRefreshView xRefreshView;
     private RecyclerView recyclerView;
     private LoveHouseAdapter adapter;
     private int page = 1;
     private LayoutInflater inflate;
-    private View onNetView;
     private View contentView;
     List<ImageView> indictorImags;
-    private FrameLayout frameLayout;
+    List<LoveHouseBean.BannerBean> bannerData;
+    BannerViewPagerAdapter bannerViewPagerAdapter;
+    /*空间大师  */
+    List<LoveHouseBean.RecommendBean> recommend;
+    /*最热列表*/
+    List<LoveHouseBean.HottestBean> hottest;
+    ViewPager viewPager;
+
+    /*空间名师*/
+    LinearLayout layoutRcommendContainer;
 
     @Nullable
     @Override
@@ -65,6 +78,7 @@ public class LoveHouseFragment extends Fragment {
     }
 
     private void loadDataForNet() {
+        L.e("爱家 loadDataForNet");
         final HashMap<String, String> map = new HashMap<>();
         map.put("OPT", "525");
         map.put("currPage", page + "");
@@ -73,9 +87,13 @@ public class LoveHouseFragment extends Fragment {
             public void onSuccess(String result) {
                 xRefreshView.stopRefresh();
                 Log.e("Tag 525", result);
-                //ShePinFragment.ShePinBean shePinBean = GsonUtil.getInstance().fromJson(result, ShePinFragment.ShePinBean.class);
-                // mdata = shePinBean.getProducts();
-                // adapter.notifyDataSetChanged(mdata);
+                LoveHouseBean loveHouseBean = GsonUtil.getInstance().fromJson(result, LoveHouseBean.class);
+                bannerData = loveHouseBean.getBanner();
+                recommend = loveHouseBean.getRecommend();
+                hottest = loveHouseBean.getHottest();
+                setBannerData();
+                setHsLayoutRecommendData();
+                adapter.notifyDataSetChanged(hottest);
             }
         });
 
@@ -83,46 +101,50 @@ public class LoveHouseFragment extends Fragment {
 
     private View getHeadView() {
         headView = inflate.inflate(R.layout.include_activity_love_house_head, null);
-        ViewPager viewPager = (ViewPager) headView.findViewById(R.id.id_viewpager);
-        setBannerData(viewPager);
-
+        viewPager = (ViewPager) headView.findViewById(R.id.id_viewpager);
         TextView tvMore = (TextView) headView.findViewById(R.id.id_tv_more);
         tvMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.show(getContext(), "更多被点击");
                 Intent intent = new Intent(getContext(), MemberAuthorityActivity.class);
                 startActivity(intent);
             }
         });
         LinearLayout layoutContainer = (LinearLayout) headView.findViewById(R.id.id_hs_container);
-        setHsLayoutData(layoutContainer);
+        setHsLayoutShopData(layoutContainer);
+        layoutRcommendContainer = (LinearLayout) headView.findViewById(R.id.id_recomend_container);
+
 
         return headView;
     }
 
 
-    private void setBannerData(ViewPager viewPager) {
-        List<String> images = new ArrayList<>();
+    private void setBannerData() {
+        if (bannerData == null && bannerData.size() == 0) return;
+        bannerViewPagerAdapter = new BannerViewPagerAdapter(bannerData);
+        bannerViewPagerAdapter.setBannerSelectListener(new BannerViewPagerAdapter.BannerSelectListener() {
+            @Override
+            public void onSelect(int position) {
+                Intent mIntent = new Intent(getContext(), TravelWebViewActivity.class);
+                mIntent.putExtra("url", bannerData.get(position%bannerData.size()).getUrl());
+                mIntent.putExtra("title", "home");
+                startActivity(mIntent);
+            }
+        });
         indictorImags = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            images.add(HttpConfig.IMAGEHOST + "/images?uuid=0d2eb055-a471-4a1d-abb7-305bd712df35");
-        }
-        BannerViewPagerAdapter bannerViewPagerAdapter = new BannerViewPagerAdapter(images);
-        viewPager.setOffscreenPageLimit(images.size());
+        viewPager.setOffscreenPageLimit(bannerData.size());
         viewPager.setAdapter(bannerViewPagerAdapter);
         viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                Log.e("TAG  ", "当前点击：" + position);
                 setIndicator(position);
             }
         });
         viewPager.setCurrentItem(0);
-
-
         LinearLayout llContainerIndictor = (LinearLayout) headView.findViewById(R.id.ll_container_indictor);
-        for (int i = 0; i < images.size(); i++) {
+        if (bannerData.size() == 0) return;
+        llContainerIndictor.removeAllViews();
+        for (int i = 0; i < bannerData.size(); i++) {
             View view = inflate.inflate(R.layout.view_cycle_viewpager_indicator, null);
             view.setTag(i);
             indictorImags.add((ImageView) view.findViewById(R.id.image_indicator));
@@ -147,22 +169,55 @@ public class LoveHouseFragment extends Fragment {
     }
 
 
-    private void setHsLayoutData(LinearLayout layoutContainer) {
+    /*居家好物*/
+    private void setHsLayoutShopData(LinearLayout layoutContainer) {
+        layoutContainer.removeAllViews();
         for (int i = 0; i < 8; i++) {
             View view = inflate.inflate(R.layout.item_love_house_view, null);
+            //ImageView imageView=(ImageView) view.findViewById(R.id.iv_ig_lovehouser);
+            //TextView textView=(TextView) view.findViewById(R.id.iv_tv_lovehouser);
+
             view.setTag(i);
             layoutContainer.addView(view);
         }
     }
 
+
+    /*大师空间*/
+    private void setHsLayoutRecommendData() {
+        layoutRcommendContainer.removeAllViews();
+        for (int i = 0; i < recommend.size(); i++) {
+            View view = inflate.inflate(R.layout.item_love_house_recommend, null);
+            RoundImageView imageView = (RoundImageView) view.findViewById(R.id.id_ig_recommed);
+            TextView textView = (TextView) view.findViewById(R.id.id_tv_recommed_name);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) imageView.getLayoutParams();
+            layoutParams.width = DisplayUtils.getDisplayWidth(getContext()) / 2;
+            Glide.with(getContext()).load(HttpConfig.IMAGEHOST + recommend.get(i).getImageFileName()).into(imageView);
+            textView.setText(recommend.get(i).getLocation());
+            view.setTag(i);
+            final int finalI = i;
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent mIntent = new Intent(getContext(), TravelWebViewActivity.class);
+                    mIntent.putExtra("url", recommend.get(finalI).getUrl());
+                    mIntent.putExtra("title", "home");
+                    startActivity(mIntent);
+                }
+            });
+            layoutRcommendContainer.addView(view);
+        }
+    }
+
+
     private void initView() {
-        mdata = new ArrayList<>();
-        adapter = new LoveHouseAdapter(getActivity(), mdata);
+        hottest = new ArrayList<>();
+        adapter = new LoveHouseAdapter(getActivity(), hottest);
         xRefreshView.setAutoRefresh(false);
         xRefreshView.setAutoLoadMore(false);
         xRefreshView.setPinnedTime(1000);
-        xRefreshView.stopLoadMore(false);
-        xRefreshView.setPullLoadEnable(true);
+        xRefreshView.stopLoadMore(true);
+        xRefreshView.setPullLoadEnable(false);
         xRefreshView.setMoveForHorizontal(true);
         xRefreshView.setXRefreshViewListener(new XRefreshView.SimpleXRefreshListener() {
             @Override
@@ -185,6 +240,15 @@ public class LoveHouseFragment extends Fragment {
             }
         });
         adapter.setHeaderView(getHeadView(), recyclerView);
+        adapter.setRecycleItemListener(new LoveHouseAdapter.RecycleItemListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent mIntent = new Intent(getContext(), TravelWebViewActivity.class);
+                mIntent.putExtra("url", recommend.get(position).getUrl());
+                mIntent.putExtra("title", "home");
+                startActivity(mIntent);
+            }
+        });
         recyclerView.setAdapter(adapter);
     }
 

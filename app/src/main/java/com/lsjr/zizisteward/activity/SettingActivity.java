@@ -116,6 +116,7 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
                 startActivity(new Intent(SettingActivity.this, CommonQuestionActivity.class));/*常见问题*/
                 break;
             case R.id.about_us:
+                startActivity(new Intent(SettingActivity.this, AboutZiZiActivity.class));/*关于我们*/
                 break;
             case R.id.re_version_update:
                 CheckUpdate();

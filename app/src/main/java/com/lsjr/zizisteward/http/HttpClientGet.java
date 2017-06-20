@@ -75,6 +75,8 @@ public class HttpClientGet {
                             } else {
                                 if (msg.contains(USERID_ERROR)) {
 
+                                } else if (msg.contains("javax.net")) {
+
                                 } else {
                                     callBack.onFailure(new MyError(ErrorType.backgroundError, msg));
                                 }

@@ -281,6 +281,9 @@
             android:name="com.lsjr.zizisteward.ly.activity.MyAttention"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.lsjr.zizisteward.lcq.activity.MostNewDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.lsjr.zizisteward.ly.activity.Topic_Management"
             android:screenOrientation="portrait" />
         <activity

@@ -199,6 +199,7 @@ public class NewHomeFragment extends Fragment implements OnClickListener {
                 System.out.println("新首页" + result);
                 NewHome bean = GsonUtil.getInstance().fromJson(result, NewHome.class);
                 adv_list = bean.getAdvertisements();
+
                 home_viewpager.setAdapter(pageAdapter);
                 home_cpi.setViewPager(home_viewpager);
                 home_cpi.setOnPageChangeListener(pageListener);
@@ -586,25 +587,12 @@ public class NewHomeFragment extends Fragment implements OnClickListener {
                 @Override
                 public void onClick(View v) {
                     mIntent = new Intent(getContext(), TravelWebViewActivity.class);
-                    if (position == 0) {
-                        mIntent.putExtra("url", adv_list.get(0).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 1) {
-                        mIntent.putExtra("url", adv_list.get(1).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 2) {
-                        mIntent.putExtra("url", adv_list.get(2).getUrl());
-                        mIntent.putExtra("title", "home");
-                    } else if (position == 3) {
-                        mIntent.putExtra("url", adv_list.get(3).getUrl());
-                        mIntent.putExtra("title", "home");
-                    }
+                    mIntent.putExtra("url", adv_list.get(position).getUrl());
+                    mIntent.putExtra("title", "home");
                     startActivity(mIntent);
                 }
             });
-
             return iv;
-
         }
     };
 

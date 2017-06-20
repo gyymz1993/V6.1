@@ -58,6 +58,7 @@ public class GallPagerAdapter extends MyPageradapter {
         return view;
     }
 
+
     class ViewHolder{
         ImageView imageView;
         TextView tvContent;

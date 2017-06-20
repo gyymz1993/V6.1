@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimen_318_dip"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:clipChildren="false">
 
@@ -10,12 +10,12 @@
     <com.lsjr.zizisteward.ymz.custom.GalleryViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_210_dip"
+        android:layout_height="170dip"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/dimen_28_dip"
-        android:layout_marginLeft="@dimen/dimen_74_dip"
-        android:layout_marginRight="@dimen/dimen_74_dip"
-        android:layout_marginTop="@dimen/dimen_32_dip"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="3dip"
         android:clipChildren="false"
         android:overScrollMode="never" />
 
@@ -24,9 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/viewpager"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dip"
+        android:layout_marginBottom="15dip"
         android:src="@drawable/triangle" />
 
 </RelativeLayout>

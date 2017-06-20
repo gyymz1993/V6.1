@@ -14,7 +14,7 @@
         android:paddingTop="15dp">
 
         <ImageView
-            android:id="@+id/iv_classic_licqi"
+            android:id="@+id/iv_ig_lovehouser"
             android:layout_width="60dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
@@ -22,7 +22,7 @@
             android:src="@drawable/user_head" />
 
         <TextView
-            android:id="@+id/tv_classic_licqi"
+            android:id="@+id/iv_tv_lovehouser"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_below="@+id/iv_classic_licqi"

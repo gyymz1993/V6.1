@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_root"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dimen_313_dip"
     android:background="@color/white"
@@ -14,10 +15,13 @@
             android:id="@+id/tv_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textColor="#333333" />
+            android:text="0000"
+            android:textColor="#333333"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_two"

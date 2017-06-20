@@ -115,7 +115,7 @@ public class BenefitsBean {
             private int id;
             private String image;
             private int is_show;
-            private int level_id;
+            private String level_id;
             private String name;
             private boolean persistent;
             private int sort;
@@ -181,11 +181,11 @@ public class BenefitsBean {
                 this.is_show = is_show;
             }
 
-            public int getLevel_id() {
+            public String getLevel_id() {
                 return level_id;
             }
 
-            public void setLevel_id(int level_id) {
+            public void setLevel_id(String level_id) {
                 this.level_id = level_id;
             }
 

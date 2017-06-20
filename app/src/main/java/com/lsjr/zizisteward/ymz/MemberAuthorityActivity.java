@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.google.gson.Gson;
 import com.lsjr.zizisteward.R;
@@ -39,17 +38,13 @@ import java.util.List;
  * 创建人：$ gyymz1993
  * 创建时间：2017/6/12 10:22
  */
-
 @SuppressLint("Registered")
 public class MemberAuthorityActivity extends BaseActivity {
-
     RecyclerView mbARecyclerView;
     GalleryViewPager galleryViewPager;
     ImageView imageViewChange;
-    //private List<String> gellImages = new ArrayList<>();
     List<DescriptionBean.RegularsBean> regulars;
-    //private List<MenBerAuthorBean> menBerAuthorBeans = new ArrayList<>();
-    int changeCount;
+    private int viewPageIndex;
     private GallPagerAdapter gallPagerAdapter;
     private MemberAuthorAdapter authorAdapter;
 
@@ -59,11 +54,14 @@ public class MemberAuthorityActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle();
         initViwebyId();
         loadVPDataForNet();
-
     }
 
+    public void setTitle(){
+        setmTitle("会员权益");
+    }
 
     /*获取会员等级*/
     private void loadVPDataForNet() {
@@ -76,10 +74,11 @@ public class MemberAuthorityActivity extends BaseActivity {
                 DescriptionBean descriptionBean = new Gson().fromJson(result, DescriptionBean.class);
                 regulars = descriptionBean.getRegulars();
                 gallPagerAdapter = new GallPagerAdapter(getApplicationContext(), regulars);
+                if (regulars.size()==0)return;
                 galleryViewPager.setAdapter(gallPagerAdapter);
                 galleryViewPager.setOffscreenPageLimit(regulars.size());
-                changeCount = 0;
-                loadRVDataforNet(regulars.get(changeCount).getId() + "");
+                viewPageIndex = 0;
+                loadRVDataforNet(regulars.get(viewPageIndex).getId() + "");
 
             }
         });
@@ -124,7 +123,6 @@ public class MemberAuthorityActivity extends BaseActivity {
         mbARecyclerView = (RecyclerView) findViewById(R.id.id_rv);
         galleryViewPager = (GalleryViewPager) findViewById(R.id.viewpager);
         imageViewChange = (ImageView) findViewById(R.id.id_ig_change);
-        RelativeLayout viewPagerRoot = (RelativeLayout) findViewById(R.id.root);
 
 
         galleryViewPager.setPageTransformer(true, new ScalePageTransformer());
@@ -149,7 +147,7 @@ public class MemberAuthorityActivity extends BaseActivity {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 L.e("setOnPageChangeListener  position" + position);
-                changeCount = position;
+                viewPageIndex = position;
                 String vipId = regulars.get(position%regulars.size()).getId() + "";
                 loadRVDataforNet(vipId);
             }
@@ -158,20 +156,15 @@ public class MemberAuthorityActivity extends BaseActivity {
         imageViewChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (changeCount == regulars.size() - 1) {
-                    changeCount = 0;
+                if (viewPageIndex == regulars.size() - 1) {
+                    viewPageIndex = 0;
                 } else {
-                    changeCount++;
+                    viewPageIndex++;
                 }
-                galleryViewPager.setCurrentItem(changeCount);
+                galleryViewPager.setCurrentItem(viewPageIndex);
             }
         });
-
-
-
-
     }
-
 
     public void setViewPagerScrollSpeed(int ducration) {
         Interpolator interpolator = new AccelerateInterpolator();
